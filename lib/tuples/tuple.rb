@@ -1,13 +1,23 @@
 class Tuple
-  def initialize(*args)
-    @args = args
+  include Comparable
+
+  def initialize(*values)
+    @values = values.freeze
   end
 
-  def self.[](*args)
-    new(*args)
+  def self.[](*values)
+    new(*values)
   end
+
+  def <=>(other)
+    return unless other.kind_of? self.class
+    values <=> other.send(:values)
+  end
+
+  private
+  attr_reader :values
 end
 
-def Tuple(*args)
-  Tuple[*args]
+def Tuple(*values)
+  Tuple[*values]
 end
