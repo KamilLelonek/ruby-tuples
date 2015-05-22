@@ -34,9 +34,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Tests
 
-To run all tests from `test` directory execute `rake`, which has a default task that points to:
+To run all tests from `spec` directory execute:
 
-    bundle exec rake test
+    bundle exec rspec
 
 ## Contributing
 
