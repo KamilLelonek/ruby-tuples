@@ -1,5 +1,7 @@
 # Tuples
 
+[ ![Codeship Status for KamilLelonek/ruby-tuples](https://codeship.com/projects/c82b3680-e2e1-0132-cc6e-76e3d81118b5/status?branch=master)](https://codeship.com/projects/81591)
+
 Ruby implementation for tuples known from functional programming.
 
 Tuple combines a fixed number of items together so that they can be passed around as a whole. Unlike an array or list, a tuple can hold objects with different types but they are also immutable.
@@ -32,7 +34,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Tests
 
-To run all tests from `test` directory execute `rake`, which has a default task that points to `rake test`.
+To run all tests from `test` directory execute `rake`, which has a default task that points to:
+
+    bundle exec rake test
 
 ## Contributing
 
