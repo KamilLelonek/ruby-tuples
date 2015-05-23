@@ -1,4 +1,5 @@
 class Tuple
+  extend  Forwardable
   include Comparable
 
   def initialize(*values)
@@ -14,6 +15,11 @@ class Tuple
     values <=> other.send(:values)
   end
 
+  def_delegators :values,
+                 :length,
+                 :first,
+                 :last,
+                 :[]
   private
   attr_reader :values
 end
