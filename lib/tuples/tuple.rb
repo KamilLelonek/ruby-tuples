@@ -12,7 +12,7 @@ class Tuple
 
   def <=>(other)
     return unless other.kind_of? self.class
-    values <=> other.send(:values)
+    values <=> other.values
   end
 
   def_delegators :values,
@@ -20,7 +20,7 @@ class Tuple
                  :first,
                  :last,
                  :[]
-  private
+  protected
   attr_reader :values
 end
 
