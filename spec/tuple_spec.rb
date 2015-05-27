@@ -1,11 +1,21 @@
 describe Tuple do
   describe 'Initialization' do
-    it 'should instantiate by initializer' do
-      expect { Tuple.new() }       .not_to raise_error
-      expect { Tuple.new(1, 2, 3) }.not_to raise_error
+    context 'initializer' do
+      it 'should instantiate with multiple arguments' do
+        expect { Tuple.new() }       .not_to raise_error
+        expect { Tuple.new(1, 2, 3) }.not_to raise_error
 
-      expect(Tuple.new())       .to be_instance_of Tuple
-      expect(Tuple.new(1, 2, 3)).to be_instance_of Tuple
+        expect(Tuple.new())       .to be_instance_of Tuple
+        expect(Tuple.new(1, 2, 3)).to be_instance_of Tuple
+      end
+
+      it 'should instantiate with an array' do
+        expect { Tuple.new([]) }       .not_to raise_error
+        expect { Tuple.new([1, 2, 3]) }.not_to raise_error
+
+        expect(Tuple.new([]))       .to be_instance_of Tuple
+        expect(Tuple.new([1, 2, 3])).to be_instance_of Tuple
+      end
     end
 
     it 'should instantiate by method' do

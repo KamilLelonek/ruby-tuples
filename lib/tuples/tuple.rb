@@ -3,7 +3,7 @@ class Tuple
   include Comparable
 
   def initialize(*values)
-    @values = values.freeze
+    @values = values.flatten.freeze
   end
 
   def self.[](*values)
