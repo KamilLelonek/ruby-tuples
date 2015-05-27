@@ -20,10 +20,13 @@ class Tuple
                  :first,
                  :last,
                  :[]
+
+  alias_method :arity, :length
+
   protected
   attr_reader :values
 end
 
 def Tuple(*values)
-  Tuple[*values]
+  Tuple.new(*values)
 end

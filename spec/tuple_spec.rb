@@ -80,6 +80,14 @@ describe Tuple do
         expect(one_element_tuple)      .to have_exactly(1).item
         expect(one_element_tuple.first).to eq one_element_tuple.last
       end
+
+      it 'should count tuple elements' do
+        expect(empty_tuple.length)      .to eq 0
+        expect(empty_tuple.arity)       .to eq 0
+        expect(one_element_tuple.length).to eq 1
+        expect(one_element_tuple.arity) .to eq 1
+        expect(Tuple(1, 2, 3).length)   .to eq Tuple(:a, :b, :c).arity
+      end
     end
   end
 end
