@@ -24,7 +24,30 @@ Or install it yourself as:
 
 ## Usage
 
-...
+You are provided with two classes:
+
+  - `Tuple` in general
+  - `Pair` in particular
+
+The main difference between two of them are that `Tuple` always consist of 2 elements - when initialized with less - the missing ones are filled with `nil`, when initialized with more - an `ArgumentError` is raised.
+
+You can initialize them in different ways:
+
+    Tuple.new(1, 2)
+    Tuple.new([1, 2])
+    Tuple(1, 2)
+    Tuple([1, 2])
+    Tuple[1, 2]
+    
+depending on which syntax you feel more convenient with.
+
+Both of the classes have some auxiliary methods:
+
+  - `length` / `arity` - which returns number of values inside tuple
+  - `first` / `last` / `second` (only pair) - which returns a corresponding elements
+  - `[]` that gives you an access to a particular elements
+
+Tuples are also comparable which means you can compare them, match them in `case` statement or even sort and find them in an array.
 
 ## Development
 
