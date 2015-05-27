@@ -88,6 +88,10 @@ describe Tuple do
         expect(one_element_tuple.arity) .to eq 1
         expect(Tuple(1, 2, 3).length)   .to eq Tuple(:a, :b, :c).arity
       end
+
+      it 'should return reversed tuple' do
+        expect(Tuple(1, 2, 3).invert).to eq Tuple(3, 2, 1)
+      end
     end
   end
 end

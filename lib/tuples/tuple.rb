@@ -15,6 +15,10 @@ class Tuple
     values <=> other.values
   end
 
+  def invert
+    Tuple(*values.reverse)
+  end
+
   def_delegators :values,
                  :length,
                  :first,
