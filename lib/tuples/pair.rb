@@ -8,6 +8,8 @@ class Pair < Tuple
     end
   end
 
+  alias_method :second, :last
+
   private
   def more_than_two_arguments?(arguments)
     arguments.length > 2
