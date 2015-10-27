@@ -29,7 +29,7 @@ You are provided with two classes:
   - `Tuple` in general
   - `Pair` in particular
 
-The main difference between two of them are that `Tuple` always consist of 2 elements - when initialized with less - the missing ones are filled with `nil`, when initialized with more - an `ArgumentError` is raised.
+The main difference between two of them are that `Pair` always consists of 2 elements - when initialized with less - the missing ones are filled with `nil`, when initialized with more - an `ArgumentError` is raised.
 
 You can initialize them in different ways:
 
