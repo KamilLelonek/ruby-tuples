@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'tuples'
   spec.version       = Tuples::VERSION
   spec.authors       = ['Kamil Lelonek']
-  spec.email         = ['squixy.sln@gmail.com']
+  spec.email         = ['kamil@lelonek.me']
   spec.summary       = %q{Ruby implementation for tuples known from functional programming}
   spec.description   = %q{Tuple combines a fixed number of items together so that they can be passed around as a whole. Unlike an array or list, a tuple can hold objects with different types but they are also immutable.}
   spec.homepage      = 'https://github.com/KamilLelonek/ruby-tuples'
